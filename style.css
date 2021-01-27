@@ -1,0 +1,75 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.grid-container{
+   display: grid;
+   grid-template-columns: minmax(300px, auto) 1fr;
+   grid-template-areas: "navbar MainContent";
+   grid-gap: 20px;
+   width: 90%;
+   margin: auto;
+}
+
+nav#navbar{
+    position: fixed;
+    grid-area: navbar;
+
+
+}
+
+nav#navbar header{
+    display: block;
+    padding: 20px 35px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav#navbar a{
+    display: block;
+    padding: 20px 95px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: #222121;
+    font-size: 20px;
+}
+
+main#main-doc{
+grid-area: MainContent;
+
+}
+
+code{
+    padding: 30px;
+    display: block;
+    background:#cac9c9;
+    margin: 15px;
+}
+
+ul{
+    
+    margin: 15px 35px;
+    text-align: justify;
+}
+
+ul li{
+    margin: 15px 0;
+}
+
+.main-section header{
+    font-size: 1.5em;
+    padding: 20px 5px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:750px){
+   
+    
+.grid-container{
+    grid-template-columns: 1fr;
+    grid-template-areas: "";
+
+}
+
+}
